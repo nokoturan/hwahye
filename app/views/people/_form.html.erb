@@ -1,15 +1,23 @@
-<%= form_for(@people) do |f| %>
+<%= form_for([@reserf, @person]) do |f| %>
 
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.telephone_field :phone %>
+    <%= f.label :phone1 %><br>
+    <%= f.text_field :phone1 %>
   </div>
+  <div class="field">
+    <%= f.label :phone2 %><br>
+    <%= f.text_field :phone2 %>
+  </div>
+  <% if @reserf.booking > 10 %>
+    <input type="number" name="person[member]" min="1" max="10">
+  <% else %>
+    <input type="number" name="person[member]" min="1" max="<%= @reserf.booking %>">
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-

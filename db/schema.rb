@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321173354) do
+ActiveRecord::Schema.define(version: 20160329071724) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.integer  "member"
+    t.integer  "reserve_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people_reserves", id: false, force: :cascade do |t|
+    t.integer "reserf_id", null: false
+    t.integer "person_id", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -32,7 +47,7 @@ ActiveRecord::Schema.define(version: 20160321173354) do
     t.string   "title"
     t.text     "content"
     t.date     "reser_time"
-    t.integer  "people"
+    t.integer  "booking"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Phone1:</strong>
+  <%= @person.phone1 %>
+</p>
+
+<p>
+  <strong>Phone2:</strong>
+  <%= @person.phone2 %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @person.member %>
+</p>
+
+<%= link_to 'Edit', edit_reserf_person_path(@reserf, @person) %> |
+<%= link_to 'Back', reserf_people_path %>

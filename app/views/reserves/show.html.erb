@@ -15,5 +15,14 @@
   <%= @reserf.reser_time %>
 </p>
 
+<p>
+  <strong>Booking:</strong>
+  <%= @reserf.booking %>
+</p>
+
 <%= link_to 'Edit', edit_reserf_path(@reserf) %> |
 <%= link_to 'Back', reserves_path %>
+
+<% unless @reserf.booking == 0 %>
+  <%= link_to '등록하기', new_reserf_person_path(@reserf) %>
+<% end %>

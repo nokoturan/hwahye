@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing People</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone1</th>
+      <th>Phone2</th>
+      <th>Member</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.phone1 %></td>
+        <td><%= person.phone2 %></td>
+        <td><%= person.member %></td>
+        <td><%= link_to 'Show', reserf_person_path(@reserf, person) %></td>
+        <td><%= link_to 'Edit', edit_reserf_person_path(@reserf, person) %></td>
+        <td><%= link_to 'Destroy', reserf_person_path(@reserf, person), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Person', new_reserf_person_path %>

@@ -4,7 +4,7 @@ class CreateReserves < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.date :reser_time
-      t.integer :people
+      t.integer :booking
 
       t.timestamps null: false
     end
