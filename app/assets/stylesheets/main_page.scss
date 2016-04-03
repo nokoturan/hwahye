@@ -138,6 +138,45 @@
     overflow: hidden;
     width: 85%;
     background-color: rgba(217,217,217,0.9);
+    display: table;
+    .pro_intro{
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      .margin {
+        margin-top: 5%;
+      }
+      .row {
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0 18% 0 18%;
+        p {
+          font-size: 25px;
+          line-height: 55px;
+          display: inline-block;
+        }
+        a {
+          text-decoration: none;
+          float: right;
+          line-height: 105px;
+          p {
+            font-size: 17px;
+          }
+        }
+        a:hover {
+          background-color: transparent;
+          text-decoration: none; 
+        }
+        img {
+          height: 12%;
+          width: 12%;
+          float: left;
+          margin-top: 10px;
+        }
+      }  
+    }
   }
 }
 
