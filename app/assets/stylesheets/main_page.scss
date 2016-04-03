@@ -1,0 +1,180 @@
+.menu_logo {
+  width: 100%;
+  height: 100px;
+  display: inline-block;
+  .hori_logo {
+    a:hover {
+      background-color: transparent;
+      text-decoration: none; 
+    }
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+    .logo {
+      height: 90px;
+      padding: 10px 15px 0 10px;
+      width: 65px;
+    }
+    .logo_name {
+      width: 190px;
+      padding-top: 30px;
+    } 
+  }
+  .menu_bar {
+    height: 100px;
+    width: 40%;
+    .menu_hwahye {
+      background-color: rgba(211,151,6,0.45);
+    }
+    .menu_info {
+      background-color: rgba(192,0,0,0.45);
+    }
+    .menu_program {
+      background-color: rgba(0,32,96,0.45);
+    }
+    .menu_road {
+      background-color: rgba(0,0,0,0.45);
+    }
+    .menu_qna {
+      background-color: rgba(217,217,217,0.45);
+    }
+    p {
+      color: white;
+      font-size: 15px;
+      margin: 40px 0;
+    }
+  }
+}
+
+/* intro part */
+.intro_content {
+  .left_side {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    width: 15%;  
+    max-width: 150px;
+    background-color: rgba(211,151,6,0.45);
+    .sub_menu {
+      margin-top: 30px;
+      li {
+        background-color: #CEA65A;
+        text-align: center;
+        list-style: none;
+        height: 50px;
+        margin-top: 30px;
+        display: table;
+        width: 100%;
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          color: white;
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .reserve_back {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 85%;
+    background-color: rgba(217,217,217,0.9);
+  }
+}
+
+/* info part */
+.info_content {
+  .left_side {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    width: 15%;  
+    max-width: 150px;
+    background-color: rgba(192,0,0,0.45);
+  }
+  .reserve_back {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 85%;
+    background-color: rgba(217,217,217,0.9);
+  }
+}
+
+/* program part */
+.pro_content {
+  .left_side {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    width: 15%;  
+    max-width: 150px;
+    background-color: rgba(0,32,96,0.45);
+    .sub_menu {
+      margin-top: 30px;
+      li {
+        background-color: #667697;
+        text-align: center;
+        list-style: none;
+        height: 50px;
+        margin-top: 30px;
+        display: table;
+        width: 100%;
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          color: white;
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .reserve_back {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 85%;
+    background-color: rgba(217,217,217,0.9);
+  }
+}
+
+/* road part */
+.road_content {
+  .left_side {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    width: 15%;  
+    max-width: 150px;
+    background-color: rgba(0,0,0,0.45);
+  }
+  .reserve_back {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 85%;
+    background-color: rgba(217,217,217,0.9);
+  }
+}
+
+/* qna part */
+.qna_content {
+  .left_side {
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    width: 15%;  
+    max-width: 150px;
+    background-color: rgba(217,217,217,0.45);
+  }
+  .reserve_back {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 85%;
+    background-color: rgba(217,217,217,0.9);
+  }
+}

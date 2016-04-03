@@ -30,11 +30,6 @@ ActiveRecord::Schema.define(version: 20160329071724) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "people_reserves", id: false, force: :cascade do |t|
-    t.integer "reserf_id", null: false
-    t.integer "person_id", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"

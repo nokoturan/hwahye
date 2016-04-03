@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   resources :posts
 
   root 'main_page#index'
+  get 'main_page/program'
+  get 'main_page/info'
+  get 'main_page/road'
+  get 'main_page/intro'
+  get 'main_page/qna'
 end

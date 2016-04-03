@@ -22,6 +22,10 @@ html, body {
       img {
         width: 100%;
       }
+      a:hover {
+        background-color: transparent;
+        text-decoration: none; 
+      }
     }
   }
   .line {
@@ -51,6 +55,21 @@ html, body {
       a:hover {
         background-color: transparent;
         text-decoration: none; 
+      }
+      .hide {
+        padding: 0;
+        display: none;
+        li {
+          list-style: none;
+          font-size: 15px;
+          color: white;
+        }
+        .margin {
+          list-style: none;
+          font-size: 15px;
+          color: white;
+          margin-top: 15px;
+        }
       }
     }
     .hwahye{
