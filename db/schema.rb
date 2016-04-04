@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160329071724) do
     t.text     "content"
     t.date     "reser_time"
     t.integer  "booking"
+    t.integer  "reser_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,23 +1,73 @@
-<%= form_for([@reserf, @person]) do |f| %>
+<div class="main">
+  <div class="menu_logo">
+    <div class="hori_logo">
+      <a href="/">
+        <img src="/01_main/main_logo.png" class="logo">
+        <img src="/program/hori_logo.png" class="logo_name">
+      </a>
+    </div>
+    <div class="menu_bar">
+      <a href="/main_page/intro">
+        <div class="menu_hwahye area">
+          <p>화혜</p>
+        </div>
+      </a>
+      <a href="/main_page/info">
+        <div class="menu_info area">
+          <p>소식</p>
+        </div>
+      </a>
+      <a href="/main_page/program">
+        <div class="menu_program area">
+          <p>프로그램</p>
+        </div>
+      </a>
+      <a href="/main_page/road">
+        <div class="menu_road area">
+          <p>오시는길</p>
+        </div>
+      </a>
+      <a href="/main_page/qna">
+        <div class="menu_qna area">
+          <p>문의하기</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="pro_content color_back">
+    <div class="left_side">
+      <div class="sub_menu">
+        <a href="/main_page/program"><li><p>프로그램</p></li></a>
+        <a href="/reserves/index"><li><p>예약하기</p></li></a>
+        <a href="/"><li><p>후기게시판</p></li></a>
+      </div>
+    </div>
+    <div class="reserve_back">
+      <div class="pro_intro">
+        <%= form_for([@reserf, @person]) do |f| %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+          <div class="field">
+            <%= f.label :name %><br>
+            <%= f.text_field :name %>
+          </div>
+          <div class="field">
+            <%= f.label :phone1 %><br>
+            <%= f.text_field :phone1 %>
+          </div>
+          <div class="field">
+            <%= f.label :phone2 %><br>
+            <%= f.text_field :phone2 %>
+          </div>
+          <% if @reserf.booking > 10 %>
+            <input type="number" name="person[member]" min="1" max="10">
+          <% else %>
+            <input type="number" name="person[member]" min="1" max="<%= @reserf.booking %>">
+          <% end %>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :phone1 %><br>
-    <%= f.text_field :phone1 %>
-  </div>
-  <div class="field">
-    <%= f.label :phone2 %><br>
-    <%= f.text_field :phone2 %>
-  </div>
-  <% if @reserf.booking > 10 %>
-    <input type="number" name="person[member]" min="1" max="10">
-  <% else %>
-    <input type="number" name="person[member]" min="1" max="<%= @reserf.booking %>">
-  <% end %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

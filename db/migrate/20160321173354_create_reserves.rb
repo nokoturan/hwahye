@@ -5,6 +5,7 @@ class CreateReserves < ActiveRecord::Migration
       t.text :content
       t.date :reser_time
       t.integer :booking
+      t.integer :reser_type
 
       t.timestamps null: false
     end

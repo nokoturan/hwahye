@@ -38,27 +38,39 @@
     <div class="left_side">
       <div class="sub_menu">
         <a href="/main_page/program"><li><p>프로그램</p></li></a>
-        <a href="/reserves"><li><p>예약하기</p></li></a>
-        <a href="/boards"><li><p>후기게시판</p></li></a>
+        <li><p>예약하기</p></li>
+        <li><p>후기게시판</p></li>
       </div>
     </div>
     <div class="reserve_back">
       <div class="pro_intro">
-        <div class="row">
-          <img src="/program/main_deco.png">
-          <p>1박2일 화혜 체험 프로그램</p>
-          <a href="/main_page/night_pro"><p>더 알아보기</p></a>
-        </div>
-        <div class="row margin">
-          <img src="/program/main_deco.png">
-          <p>6개월 체험 프로그램</p>
-          <a href="/main_page/six_pro"><p>더 알아보기</p></a>
-        </div>
-        <div class="row margin">
-          <img src="/program/main_deco.png">
-          <p>지승공예 프로그램</p>
-          <a href="/main_page/craft_pro"><p>더 알아보기</p></a>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Reserve time</th>
+              <th>People</th>
+              <th colspan="4"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @reserves.each do |reserf| %>
+              <% if reserf.reser_type==3 %>
+              <tr>
+                <td><%= reserf.title %></td>
+                <td><%= reserf.content %></td>
+                <td><%= reserf.reser_time %></td>
+                <td><%= reserf.booking %></td>
+                <td><%= link_to 'Show', reserf %></td>
+                <td><%= link_to 'Edit', edit_reserf_path(reserf) %></td>
+                <td><%= link_to 'Destroy', reserf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

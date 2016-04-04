@@ -62,6 +62,9 @@ class ReservesController < ApplicationController
     end
   end
 
+  def night_pro
+    
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reserf
@@ -70,6 +73,6 @@ class ReservesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reserf_params
-      params.require(:reserve).permit(:title, :content, :reser_time, :booking)
+      params.require(:reserve).permit(:title, :content, :reser_time, :booking, :reser_type)
     end
 end

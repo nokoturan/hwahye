@@ -1,5 +1,86 @@
-<h1>New Person</h1>
+<div class="main">
+  <div class="menu_logo">
+    <div class="hori_logo">
+      <a href="/">
+        <img src="/01_main/main_logo.png" class="logo">
+        <img src="/program/hori_logo.png" class="logo_name">
+      </a>
+    </div>
+    <div class="menu_bar">
+      <a href="/main_page/intro">
+        <div class="menu_hwahye area">
+          <p>화혜</p>
+        </div>
+      </a>
+      <a href="/main_page/info">
+        <div class="menu_info area">
+          <p>소식</p>
+        </div>
+      </a>
+      <a href="/main_page/program">
+        <div class="menu_program area">
+          <p>프로그램</p>
+        </div>
+      </a>
+      <a href="/main_page/road">
+        <div class="menu_road area">
+          <p>오시는길</p>
+        </div>
+      </a>
+      <a href="/main_page/qna">
+        <div class="menu_qna area">
+          <p>문의하기</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="pro_content color_back">
+    <div class="left_side">
+      <div class="sub_menu">
+        <a href="/main_page/program"><li><p>프로그램</p></li></a>
+        <a href="/reserves/index"><li><p>예약하기</p></li></a>
+        <a href="/"><li><p>후기게시판</p></li></a>
+      </div>
+    </div>
+    <div class="reserve_back">
+      <div class="reserve_intro">
+        <div class="reser_head">
+          <h1>체험 프로그램 예약하기</h1>
+          <hr>
+        </div>
+        <div class="reserve_form">
+          <%= form_for([@reserf, @person]) do |f| %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', reserf_people_path %>
+            <div class="field">
+              <img src="/program/check.png">
+              <p>신청인 이름</p>
+              <%= f.text_field :name %>
+            </div>
+            <div class="field">
+              <img src="/program/check.png">
+              <p>주 연락처</p>
+              <%= f.text_field :phone1 %>
+            </div>
+            <div class="field">
+              <img src="/program/check.png">
+              <p>보조 연락처</p>
+              <%= f.text_field :phone2 %>
+            </div>
+            <div class="field">
+              <img src="/program/check.png">
+              <p>인원수</p>
+              <% if @reserf.booking > 10 %>
+                <input type="number" name="person[member]" min="1" max="10">
+              <% else %>
+                <input type="number" name="person[member]" min="1" max="<%= @reserf.booking %>">
+              <% end %>
+            </div>
+            <div class="actions">
+              <input type="submit" name="commit" value="등록하기">
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

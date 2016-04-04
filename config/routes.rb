@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get 'main_page/road'
   get 'main_page/intro'
   get 'main_page/qna'
+  get 'main_page/night_pro'
+  get 'main_page/six_pro'
+  get 'main_page/craft_pro'
 end
