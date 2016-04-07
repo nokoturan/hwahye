@@ -12,6 +12,7 @@ function resizeContent() {
   var leftWidth = $(".left_side").width();
     $('.color_back').css({'height':(windowHeight-topHeight)+'px'});
     $('.reserve_back').css({'width':(windowWidth-leftWidth)+'px'});
+    $('.program_back').css({'width':(windowWidth-leftWidth)+'px'});
 }
 
 $(document).ready(function(){

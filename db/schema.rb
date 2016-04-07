@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20160329071724) do
 
   create_table "boards", force: :cascade do |t|
+    t.string   "name"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at", null: false

@@ -32,7 +32,6 @@ class PeopleController < ApplicationController
     @person.reserve_id=@reserf.id
     @reserf.booking-=@person.member
     @reserf.save
-    
 
     respond_to do |format|
       if @person.save

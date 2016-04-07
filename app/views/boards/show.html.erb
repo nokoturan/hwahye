@@ -1,14 +1,71 @@
-<p id="notice"><%= notice %></p>
+<div class="main">
+  <div class="menu_logo">
+    <div class="hori_logo">
+      <a href="/">
+        <img src="/01_main/main_logo.png" class="logo">
+        <img src="/program/hori_logo.png" class="logo_name">
+      </a>
+    </div>
+    <div class="menu_bar">
+      <a href="/main_page/intro">
+        <div class="menu_hwahye area">
+          <p>소개</p>
+        </div>
+      </a>
+      <a href="/main_page/info">
+        <div class="menu_info area">
+          <p>화혜</p>
+        </div>
+      </a>
+      <a href="/main_page/program">
+        <div class="menu_program area">
+          <p>프로그램</p>
+        </div>
+      </a>
+      <a href="/main_page/road">
+        <div class="menu_road area">
+          <p>오시는길</p>
+        </div>
+      </a>
+      <a href="/main_page/qna">
+        <div class="menu_qna area">
+          <p>문의하기</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="pro_content color_back">
+    <div class="left_side">
+      <div class="sub_menu">
+        <a href="/main_page/program"><li><p>프로그램</p></li></a>
+        <a href="/reserves"><li><p>예약하기</p></li></a>
+        <a href="/boards"><li><p>후기게시판</p></li></a>
+      </div>
+    </div>
+    <div class="reserve_back">
+      <div class="board_intro">
+          <div class="t_body">
+            <p class="t_num"><%= @board.id %></p>
+            <p class="t_name"><%= @board.name %></p>
+            <p class="t_title"><%= @board.title %></a></p>
+            <p class="t_content"><%= @board.content %></a></p>
+            <p class="t_date">2016/04/06</p>
+          </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @board.title %>
-</p>
+        <br>
 
-<p>
-  <strong>Content:</strong>
-  <%= @board.content %>
-</p>
-
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+        <img src="/01_main/color_bar.png">
+        <div class="list_img">
+          <a href="/boards">
+            <img src="/01_main/list.png">
+          </a>
+        </div>
+        <div class="write_img">
+          <a href="/boards/new">
+            <img src="/01_main/write.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

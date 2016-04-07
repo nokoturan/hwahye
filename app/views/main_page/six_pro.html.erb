@@ -9,12 +9,12 @@
     <div class="menu_bar">
       <a href="/main_page/intro">
         <div class="menu_hwahye area">
-          <p>화혜</p>
+          <p>소개</p>
         </div>
       </a>
       <a href="/main_page/info">
         <div class="menu_info area">
-          <p>소식</p>
+          <p>화혜</p>
         </div>
       </a>
       <a href="/main_page/program">
@@ -42,35 +42,9 @@
         <li><p>후기게시판</p></li>
       </div>
     </div>
-    <div class="reserve_back">
-      <div class="pro_intro">
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Content</th>
-              <th>Reserve time</th>
-              <th>People</th>
-              <th colspan="4"></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @reserves.each do |reserf| %>
-              <% if reserf.reser_type==2 %>
-              <tr>
-                <td><%= reserf.title %></td>
-                <td><%= reserf.content %></td>
-                <td><%= reserf.reser_time %></td>
-                <td><%= reserf.booking %></td>
-                <td><%= link_to 'Show', reserf %></td>
-                <td><%= link_to 'Edit', edit_reserf_path(reserf) %></td>
-                <td><%= link_to 'Destroy', reserf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-              <% end %>
-            <% end %>
-          </tbody>
-        </table>
+    <div class="program_back">
+      <div class="program_intro">
+        <img src="/01_main/six_pro.png">
       </div>
     </div>
   </div>

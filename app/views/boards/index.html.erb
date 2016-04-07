@@ -9,12 +9,12 @@
     <div class="menu_bar">
       <a href="/main_page/intro">
         <div class="menu_hwahye area">
-          <p>화혜</p>
+          <p>소개</p>
         </div>
       </a>
       <a href="/main_page/info">
         <div class="menu_info area">
-          <p>소식</p>
+          <p>화혜</p>
         </div>
       </a>
       <a href="/main_page/program">
@@ -43,34 +43,37 @@
       </div>
     </div>
     <div class="reserve_back">
-      <div class="pro_intro">
-        <h1>Listing Boards</h1>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Content</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-
-          <tbody>
+      <div class="board_intro">
+        <img src="/01_main/color_bar.png">
+          <div class="t_head">
+            <h2>NO</h2>
+            <h3>글쓴이</h3>
+            <h4>제목</h4>
+            <h5>시간</h5>
+          </div>
+          <hr>
+          <div class="t_body">
             <% @boards.each do |board| %>
-              <tr>
-                <td><%= board.title %></td>
-                <td><%= board.content %></td>
-                <td><%= link_to 'Show', board %></td>
-                <td><%= link_to 'Edit', edit_board_path(board) %></td>
-                <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
+              <p class="t_num"><%= board.id %></p>
+              <p class="t_name"><%= board.name %></p>
+              <p class="t_title"><a href="/boards/<%= board.id %>"><%= board.title %></a></p>
+              <p class="t_date">2016/04/06</p>
             <% end %>
-          </tbody>
-        </table>
+          </div>
 
         <br>
 
-        <%= link_to 'New Board', new_board_path %>
+        <img src="/01_main/color_bar.png">
+        <div class="list_img">
+          <a href="/boards">
+            <img src="/01_main/list.png">
+          </a>
+        </div>
+        <div class="write_img">
+          <a href="/boards/new">
+            <img src="/01_main/write.png">
+          </a>
+        </div>
       </div>
     </div>
   </div>
