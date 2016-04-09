@@ -1,0 +1,11 @@
+menu_title : 255/255/255  //  NO transparency
+menu_1 : 211/151/6  //  45% transparency
+menu_2 : 192/0/0  //  45% transparency
+menu_3 : 0/32/96  //  45% transparency
+menu_1 : 0/0/0  //  45% transparency
+menu_1 : 217/217/217  //  45% transparency
+footer : 166/166/166  //  20% transparency
+main_line : 242/242/242  //  NO transparency
+main_deco : 223/210/218  //  NO transparency
+main_bg_cover : 174/174/174  //  45% transparency
+menu_button : 242/242/242  //  NO transparency

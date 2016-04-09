@@ -1,0 +1,3 @@
+main_title : 제주한라산/48pt
+main_menu : a뉴궁서M/28pt
+footer : 미정/18pt
