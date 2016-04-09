@@ -1,24 +1,66 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
-
-<p>
-  <strong>Phone1:</strong>
-  <%= @person.phone1 %>
-</p>
-
-<p>
-  <strong>Phone2:</strong>
-  <%= @person.phone2 %>
-</p>
-
-<p>
-  <strong>Member:</strong>
-  <%= @person.member %>
-</p>
-
-<%= link_to 'Edit', edit_reserf_person_path(@reserf, @person) %> |
-<%= link_to 'Back', reserf_people_path %>
+<div class="main">
+  <div class="menu_logo">
+    <div class="hori_logo">
+      <a href="/">
+        <img src="/01_main/main_logo.png" class="logo">
+        <img src="/program/hori_logo.png" class="logo_name">
+      </a>
+    </div>
+    <div class="menu_bar">
+      <a href="/main_page/intro">
+        <div class="menu_hwahye area">
+          <p>소개</p>
+        </div>
+      </a>
+      <a href="/main_page/info">
+        <div class="menu_info area">
+          <p>화혜</p>
+        </div>
+      </a>
+      <a href="/main_page/program">
+        <div class="menu_program area">
+          <p>프로그램</p>
+        </div>
+      </a>
+      <a href="/main_page/road">
+        <div class="menu_road area">
+          <p>오시는길</p>
+        </div>
+      </a>
+      <a href="/main_page/qna">
+        <div class="menu_qna area">
+          <p>문의하기</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="pro_content color_back">
+    <div class="left_side">
+      <div class="sub_menu">
+        <div class="sub_bar">
+          <a href="/main_page/program"><li><p>프로그램</p></li></a>
+        </div>
+        <div class="sub_bar">
+          <a href="/reserves"><li><p>예약하기</p></li></a>
+        </div>
+        <div class="sub_bar">
+          <a href="/boards"><li><p>후기게시판</p></li></a>
+        </div>
+      </div>
+    </div>
+    <div class="reserve_back">
+      <div class="pro_intro">
+        <div class="show_content">
+          <img src="/01_main/color_bar.png">
+          <h2>예약이 완료되었습니다</h2>
+          <div class="form_box">
+            <a href="/reserves">
+              <img src="/01_main/back.png">
+            </a>
+          </div>
+        </div>
+        <img style="width: 70%; margin-bottom: 0" src="/01_main/color_bar.png">
+      </div>
+    </div>
+  </div>
+</div>
