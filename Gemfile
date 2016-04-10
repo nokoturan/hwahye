@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'therubyracer'
 gem 'rails_admin'
 gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
