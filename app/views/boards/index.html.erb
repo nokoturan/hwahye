@@ -56,7 +56,7 @@
               <h2>NO</h2>
               <h3>글쓴이</h3>
               <h4>제목</h4>
-              <h5>날짜</h5>
+              <!-- <h5>날짜</h5> -->
             </div>
             <hr>
             <div class="t_body">
@@ -64,7 +64,7 @@
                 <p class="t_num"><%= board.id %></p>
                 <p class="t_name"><%= board.name %></p>
                 <p class="t_title"><a href="/boards/<%= board.id %>"><%= board.title %></a></p>
-                <p class="t_date">2016/04/09</p>
+                <!--<p class="t_date"><%# Time.zone.now.to_date %></p> -->
               <% end %>
             </div>
 

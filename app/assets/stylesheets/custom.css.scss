@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
 html, body {
   height: 100%;
   margin: 0;
@@ -55,6 +57,9 @@ html, body {
         background-color: transparent;
         text-decoration: none; 
       }
+      p {
+        font-family: 'Jeju Gothic', serif;
+      } 
       .hide {
         padding: 0;
         display: none;
