@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, only: [:sessions]
   resources :reserves do
     resources :people
   end
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   get 'main_page/night_pro'
   get 'main_page/six_pro'
   get 'main_page/craft_pro'
+
 end

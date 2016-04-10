@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 gem 'therubyracer'
 gem 'rails_admin'
 gem 'carrierwave'
